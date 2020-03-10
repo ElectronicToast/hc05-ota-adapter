@@ -1,0 +1,423 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "Arduino HC-05 Programming Adapter"
+Date "2019-12-30"
+Rev "A"
+Comp "Ray Sun"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x06 J2
+U 1 1 5E0BBAB8
+P 7300 4300
+F 0 "J2" H 7380 4292 50  0000 L CNN
+F 1 "Conn_01x06_0.1_Socket" H 7380 4201 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 7300 4300 50  0001 C CNN
+F 3 "~" H 7300 4300 50  0001 C CNN
+	1    7300 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x06 J1
+U 1 1 5E0BC2EB
+P 7300 3400
+F 0 "J1" H 7380 3392 50  0000 L CNN
+F 1 "Conn_01x06_0.1_Header" H 7380 3301 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 7300 3400 50  0001 C CNN
+F 3 "~" H 7300 3400 50  0001 C CNN
+	1    7300 3400
+	1    0    0    -1  
+$EndComp
+Text Label 6800 4100 0    50   ~ 0
+BT_EN
+Text Label 6800 4400 0    50   ~ 0
+BT_TX
+Text Label 6800 4500 0    50   ~ 0
+BT_RX
+Text Label 6800 4600 0    50   ~ 0
+BT_RST
+$Comp
+L power:+5V #PWR09
+U 1 1 5E0BCA83
+P 6600 4200
+F 0 "#PWR09" H 6600 4050 50  0001 C CNN
+F 1 "+5V" H 6615 4373 50  0000 C CNN
+F 2 "" H 6600 4200 50  0001 C CNN
+F 3 "" H 6600 4200 50  0001 C CNN
+	1    6600 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR011
+U 1 1 5E0BCE39
+P 6600 4300
+F 0 "#PWR011" H 6600 4050 50  0001 C CNN
+F 1 "GND" H 6605 4127 50  0000 C CNN
+F 2 "" H 6600 4300 50  0001 C CNN
+F 3 "" H 6600 4300 50  0001 C CNN
+	1    6600 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 4200 7100 4200
+Wire Wire Line
+	6600 4300 7100 4300
+Wire Wire Line
+	6800 4100 7100 4100
+Wire Wire Line
+	6800 4400 7100 4400
+Wire Wire Line
+	6800 4500 7100 4500
+Wire Wire Line
+	6800 4600 7100 4600
+$Comp
+L Device:R_Small_US R1
+U 1 1 5E0BE5BB
+P 4200 3500
+F 0 "R1" H 4268 3546 50  0000 L CNN
+F 1 "1K" H 4268 3455 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4200 3500 50  0001 C CNN
+F 3 "~" H 4200 3500 50  0001 C CNN
+	1    4200 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 5E0BF2F0
+P 6600 2900
+F 0 "#PWR06" H 6600 2650 50  0001 C CNN
+F 1 "GND" H 6605 2727 50  0000 C CNN
+F 2 "" H 6600 2900 50  0001 C CNN
+F 3 "" H 6600 2900 50  0001 C CNN
+	1    6600 2900
+	1    0    0    -1  
+$EndComp
+Text Label 6800 3300 0    50   ~ 0
+ENABLE
+Wire Wire Line
+	6800 3300 7100 3300
+$Comp
+L power:+5V #PWR07
+U 1 1 5E0BF998
+P 6600 3400
+F 0 "#PWR07" H 6600 3250 50  0001 C CNN
+F 1 "+5V" H 6615 3573 50  0000 C CNN
+F 2 "" H 6600 3400 50  0001 C CNN
+F 3 "" H 6600 3400 50  0001 C CNN
+	1    6600 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 3400 7100 3400
+Wire Wire Line
+	7100 3200 6800 3200
+Wire Wire Line
+	6800 3200 6800 2900
+Wire Wire Line
+	6800 2900 6600 2900
+Text Label 6800 3500 0    50   ~ 0
+TX
+Text Label 6800 3600 0    50   ~ 0
+RX
+Text Label 6800 3700 0    50   ~ 0
+RESET
+Wire Wire Line
+	6800 3500 7100 3500
+Wire Wire Line
+	6800 3600 7100 3600
+Wire Wire Line
+	6800 3700 7100 3700
+$Comp
+L Device:C_Small C1
+U 1 1 5E0C10F0
+P 2500 2100
+F 0 "C1" H 2592 2146 50  0000 L CNN
+F 1 "0.1uF" H 2592 2055 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2500 2100 50  0001 C CNN
+F 3 "~" H 2500 2100 50  0001 C CNN
+	1    2500 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 5E0C1EE0
+P 2900 2100
+F 0 "C2" H 2992 2146 50  0000 L CNN
+F 1 "0.1uF" H 2992 2055 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2900 2100 50  0001 C CNN
+F 3 "~" H 2900 2100 50  0001 C CNN
+	1    2900 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 5E0C215B
+P 2900 2000
+F 0 "#FLG01" H 2900 2075 50  0001 C CNN
+F 1 "PWR_FLAG" H 2900 2173 50  0000 C CNN
+F 2 "" H 2900 2000 50  0001 C CNN
+F 3 "~" H 2900 2000 50  0001 C CNN
+	1    2900 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG02
+U 1 1 5E0C2428
+P 2900 2200
+F 0 "#FLG02" H 2900 2275 50  0001 C CNN
+F 1 "PWR_FLAG" H 2900 2373 50  0000 C CNN
+F 2 "" H 2900 2200 50  0001 C CNN
+F 3 "~" H 2900 2200 50  0001 C CNN
+	1    2900 2200
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5E0C284D
+P 2500 2200
+F 0 "#PWR05" H 2500 1950 50  0001 C CNN
+F 1 "GND" H 2505 2027 50  0000 C CNN
+F 2 "" H 2500 2200 50  0001 C CNN
+F 3 "" H 2500 2200 50  0001 C CNN
+	1    2500 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR04
+U 1 1 5E0C2D06
+P 2500 2000
+F 0 "#PWR04" H 2500 1850 50  0001 C CNN
+F 1 "+5V" H 2515 2173 50  0000 C CNN
+F 2 "" H 2500 2000 50  0001 C CNN
+F 3 "" H 2500 2000 50  0001 C CNN
+	1    2500 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 2000 2900 2000
+Connection ~ 2500 2000
+Connection ~ 2900 2000
+Wire Wire Line
+	2900 2200 2500 2200
+Connection ~ 2900 2200
+Connection ~ 2500 2200
+$Comp
+L 74xGxx:74LVC1G14 U2
+U 1 1 5E0C3986
+P 3700 5200
+F 0 "U2" H 4000 5400 50  0000 C CNN
+F 1 "74LVC1G14" H 4100 5100 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 3700 5200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 3700 5200 50  0001 C CNN
+	1    3700 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xGxx:74LVC1G17 U1
+U 1 1 5E0C3FB4
+P 3700 4400
+F 0 "U1" H 3900 4600 50  0000 C CNN
+F 1 "74LVC1G17" H 4100 4300 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 3700 4400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 3700 4400 50  0001 C CNN
+	1    3700 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C3
+U 1 1 5E0C4C5E
+P 4500 5200
+F 0 "C3" V 4271 5200 50  0000 C CNN
+F 1 "0.1uF" V 4362 5200 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4500 5200 50  0001 C CNN
+F 3 "~" H 4500 5200 50  0001 C CNN
+	1    4500 5200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3950 5200 4400 5200
+$Comp
+L Device:R_Small_US R4
+U 1 1 5E0C5B10
+P 3100 5400
+F 0 "R4" H 3168 5446 50  0000 L CNN
+F 1 "10K" H 3168 5355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3100 5400 50  0001 C CNN
+F 3 "~" H 3100 5400 50  0001 C CNN
+	1    3100 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 5200 3400 5200
+Wire Wire Line
+	3100 5300 3100 5200
+$Comp
+L power:GND #PWR015
+U 1 1 5E0C7362
+P 3100 5500
+F 0 "#PWR015" H 3100 5250 50  0001 C CNN
+F 1 "GND" H 3105 5327 50  0000 C CNN
+F 2 "" H 3100 5500 50  0001 C CNN
+F 3 "" H 3100 5500 50  0001 C CNN
+	1    3100 5500
+	1    0    0    -1  
+$EndComp
+Text Label 2800 5200 0    50   ~ 0
+BT_RST
+Wire Wire Line
+	2800 5200 3100 5200
+Connection ~ 3100 5200
+Text Label 5800 5200 0    50   ~ 0
+RESET
+$Comp
+L power:GND #PWR014
+U 1 1 5E0C8154
+P 3700 5300
+F 0 "#PWR014" H 3700 5050 50  0001 C CNN
+F 1 "GND" H 3705 5127 50  0000 C CNN
+F 2 "" H 3700 5300 50  0001 C CNN
+F 3 "" H 3700 5300 50  0001 C CNN
+	1    3700 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR013
+U 1 1 5E0C85DB
+P 3700 5100
+F 0 "#PWR013" H 3700 4950 50  0001 C CNN
+F 1 "+5V" H 3715 5273 50  0000 C CNN
+F 2 "" H 3700 5100 50  0001 C CNN
+F 3 "" H 3700 5100 50  0001 C CNN
+	1    3700 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR012
+U 1 1 5E0CA32E
+P 3700 4500
+F 0 "#PWR012" H 3700 4250 50  0001 C CNN
+F 1 "GND" H 3705 4327 50  0000 C CNN
+F 2 "" H 3700 4500 50  0001 C CNN
+F 3 "" H 3700 4500 50  0001 C CNN
+	1    3700 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR010
+U 1 1 5E0CB2CA
+P 3700 4300
+F 0 "#PWR010" H 3700 4150 50  0001 C CNN
+F 1 "+5V" H 3715 4473 50  0000 C CNN
+F 2 "" H 3700 4300 50  0001 C CNN
+F 3 "" H 3700 4300 50  0001 C CNN
+	1    3700 4300
+	1    0    0    -1  
+$EndComp
+Text Label 2800 4400 0    50   ~ 0
+BT_TX
+Wire Wire Line
+	2800 4400 3400 4400
+Text Label 5800 4400 0    50   ~ 0
+RX
+Text Notes 6700 5300 0    50   ~ 0
+DO NOT CONNECT ANY OTHER UART DEVICES\nEXCEPT THE HC-05 TO THE ARDUINO UART0
+Text Label 5800 3400 0    50   ~ 0
+TX
+$Comp
+L Device:R_Small_US R2
+U 1 1 5E0CE561
+P 4200 3700
+F 0 "R2" H 4268 3746 50  0000 L CNN
+F 1 "2K" H 4268 3655 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4200 3700 50  0001 C CNN
+F 3 "~" H 4200 3700 50  0001 C CNN
+	1    4200 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 5E0CE6E8
+P 4200 3800
+F 0 "#PWR08" H 4200 3550 50  0001 C CNN
+F 1 "GND" H 4205 3627 50  0000 C CNN
+F 2 "" H 4200 3800 50  0001 C CNN
+F 3 "" H 4200 3800 50  0001 C CNN
+	1    4200 3800
+	1    0    0    -1  
+$EndComp
+Text Label 2800 3600 0    50   ~ 0
+BT_RX
+Wire Wire Line
+	2800 3600 4200 3600
+Connection ~ 4200 3600
+Text Notes 3900 4700 0    50   ~ 0
+SOT-23-5
+Text Notes 3900 5500 0    50   ~ 0
+SOT-23-5
+Text Label 2800 2800 0    50   ~ 0
+BT_EN
+$Comp
+L Jumper:SolderJumper_2_Bridged JP1
+U 1 1 5E0D3576
+P 4400 2800
+F 0 "JP1" H 4400 3005 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 4400 2914 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm" H 4400 2800 50  0001 C CNN
+F 3 "~" H 4400 2800 50  0001 C CNN
+	1    4400 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP2
+U 1 1 5E0D3D36
+P 5200 5200
+F 0 "JP2" H 5200 5405 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 5200 5314 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm" H 5200 5200 50  0001 C CNN
+F 3 "~" H 5200 5200 50  0001 C CNN
+	1    5200 5200
+	1    0    0    -1  
+$EndComp
+Text Label 5800 2800 0    50   ~ 0
+ENABLE
+Wire Wire Line
+	6100 2800 4550 2800
+Wire Wire Line
+	5350 5200 6100 5200
+Wire Wire Line
+	5050 5200 4600 5200
+Wire Wire Line
+	4200 3400 6100 3400
+Wire Wire Line
+	2800 2800 4250 2800
+$Comp
+L Device:R_Small_US R3
+U 1 1 5E0E0548
+P 5200 4400
+F 0 "R3" V 4995 4400 50  0000 C CNN
+F 1 "100" V 5086 4400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5200 4400 50  0001 C CNN
+F 3 "~" H 5200 4400 50  0001 C CNN
+	1    5200 4400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6100 4400 5300 4400
+Wire Wire Line
+	5100 4400 3950 4400
+Text Notes 4800 4600 0    50   ~ 0
+Avoids short in case\nof bus contention
+Text Notes 4700 5400 0    50   ~ 0
+Cut to disconnect reset
+Text Notes 5800 2900 0    50   ~ 0
+CTS on FTDI
+Text Notes 3600 3000 0    50   ~ 0
+Cut if enable functionality not desired
+$EndSCHEMATC
