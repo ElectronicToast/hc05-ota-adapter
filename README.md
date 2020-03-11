@@ -4,6 +4,8 @@
 
 Adapter for HC-05 module for Arduino Bluetooth programming.
 
+![photo](img/adapter.png)
+
 ## Description
 
 This is a small adapter board that breaks out an HC-05 Bluetooth module to a FTDI compatible pinout. Any AVR-based Arduino can be programmed via Bluetooth through this adapter by following the steps listed in either of the following tutorials:
